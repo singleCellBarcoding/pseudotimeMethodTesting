@@ -33,7 +33,7 @@ D <- reduceDimension(D, max_components = 2, method = "DDRTree")
 D <- orderCells(D)
 
 # Plot cell trajectory in the reduced dimensional space
-pdf("WM9_500_monocle_plots.pdf")
+pdf("WM9_500_monocle2_plots.pdf")
 plot_cell_trajectory(D, color_by = "timepoint")
 plot_cell_trajectory(D, color_by = "Pseudotime")
 graphics.off()
