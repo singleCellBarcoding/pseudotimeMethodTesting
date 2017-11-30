@@ -66,6 +66,8 @@ pt_vec <- dpt_for_branch(dpt_flat, root)
 df_class <- data.frame(pt_vec, factor(metadata$timepoint, levels = c("noDrug", "48hrs", "1week", "4weeks")))
 colnames(df_class) <- c("pseudotime", "timepoint")
 
+saveRDS(df_class, "WM9_500_destiny_pseudotime.rds")
+
 pdf("WM9_500_destiny_pseudotime.pdf")
 ggplot(df_class, aes(x = timepoint, y = pseudotime, fill = timepoint)) +
   geom_violin(show.legend = F) +

@@ -1,4 +1,5 @@
 .Rhistory
 *~
-data/
-*.rds
+*.zip
+*.R.swp
+*.DS_Store

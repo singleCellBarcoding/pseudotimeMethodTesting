@@ -28,6 +28,8 @@ graphics.off()
 df_class <- data.frame(tscan_order$Pseudotime, tmp)
 colnames(df_class) <- c("pseudotime", "timepoint")
 
+saveRDS(df_class, "WM9_500_tscan_pseudotime.rds")
+
 pdf("WM9_500_tscan_pseudotime.pdf")
 ggplot(df_class, aes(x = timepoint, y = pseudotime, fill = timepoint)) +
   geom_violin(show.legend = F) +

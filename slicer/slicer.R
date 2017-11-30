@@ -31,6 +31,8 @@ plot(data.order, tmp, xlab = "Pseudotime", ylab = "Timepoint", pch = 16, col = c
 df_class <- data.frame(data.order, factor(metadata$timepoint, levels = c("noDrug", "48hrs", "1week", "4weeks")))
 colnames(df_class) <- c("pseudotime", "timepoint")
 
+saveRDS(df_class, "WM9_500_slicer_pseudotime.rds")
+
 pdf("WM9_500_slicer_pseudotime.pdf")
 ggplot(df_class, aes(x = timepoint, y = pseudotime, fill = timepoint)) +
   geom_violin(show.legend = F) +

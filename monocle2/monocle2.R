@@ -43,6 +43,8 @@ colours <- c("#ffffb2", "#fecc5c", "#fd8d3c", "#e31a1c")
 df_class <- data.frame(D@phenoData@data$Pseudotime, factor(metadata$timepoint, levels = c("noDrug", "48hrs", "1week", "4weeks")))
 colnames(df_class) <- c("pseudotime", "timepoint")
 
+saveRDS(df_class, "WM9_500_monocle2_pseudotime.rds")
+
 pdf("WM9_500_monocle2_pseudotime.pdf")
 ggplot(df_class, aes(x = timepoint, y = pseudotime, fill = timepoint)) +
   geom_violin(show.legend = F) +
