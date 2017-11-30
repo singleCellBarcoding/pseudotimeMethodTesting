@@ -1,0 +1,11 @@
+Error during "D <- orderCells(D)":
+
+Error in graph.adjacency.dense(adjmatrix, mode = mode, weighted = weighted,  : 
+  long vectors not supported yet: ../../src/include/Rinlinedfuns.h:138
+Calls: orderCells ... project2MST -> graph.adjacency -> graph.adjacency.dense -> .Call
+
+Might be problems with either Matrix or igraph package. Not necessary monocle.
+
+From https://github.com/cole-trapnell-lab/monocle-release/issues/44:
+Q: So if my data only has a few genes (not feature genes), it wouldn't work?
+A: no. it cannot robustly and accurately estimate a mean variance relationship with a few genes. For Monocle 2 trajectory inference, feature genes which is selected by either supervise or non-supervised approach (like dpFeature) are often around 1k or so.
