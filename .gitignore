@@ -4,3 +4,4 @@
 *.R.swp
 *.DS_Store
 ouija/WM9_500_ouija_model.rds
+.Rproj.user
